@@ -17,7 +17,10 @@ import { asyncHandler } from "../utils/async-handler.js";
 //pull shark step 2
 
 
-const healthCheck =asyncHandler(async(req,res)=>{
-    res.status(200).json(new ApiResponse(200,{message:"server is running"}));
+const healthCheck = asyncHandler(async (req, res) => {
+    return res
+        .status(200)
+        .json(new ApiResponse(200, {message: "Server is running"},"Success"));
 });
-export {healthCheck};
+
+export { healthCheck };
