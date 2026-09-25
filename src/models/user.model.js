@@ -4,6 +4,8 @@ import jwt from "jsonwebtoken";
 import crypto from "crypto";
 
 
+
+
 const userSchema = new Schema({
   avatar: {
     type: {
@@ -54,7 +56,7 @@ const userSchema = new Schema({
   emailVerificationToken:{
     type:String
   },
-  emailVerificationTokenExpiry:{
+  emailVerificationExpiry:{
     type:Date
   }
 },{
