@@ -65,8 +65,28 @@ const registerUser = asyncHandler(async (req, res) => {
     )
 });
 
+<<<<<<< HEAD
 const login = asyncHandler(async(req,res)=>{
  const {email,password,username}=  req.body
+=======
+const login = asyncHndler(async(req,res)=>{
+ const {email,password,username}=  req.body
+
+ if(!username || !email){
+  throw new ApiError(400, "Username or email is required")
+ }
+const user = await User.findOne({email});
+if(!user){
+  throw new ApiError(400,"User does not exists ");
+}
+const isPasswordVlid = user.isPasswordCorrect(password);
+});
+
+if(!isPasswordVlid){
+    throw new ApiError(400,"Invalid credentials");
+}
+await generateAccessAndRefreshTokens(user._id)
+>>>>>>> test-branch-2
 
  if(!username || !email){
   throw new ApiError(400, "Username or email is required")

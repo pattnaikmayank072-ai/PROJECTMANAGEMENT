@@ -1,5 +1,9 @@
 import {validationResult} from "express-validator";
+<<<<<<< HEAD
 import {ApiError} from "../utils/api-error.js";
+=======
+import {ApiError} from "../utils/apiError.js";
+>>>>>>> test-branch-2
 
 
 

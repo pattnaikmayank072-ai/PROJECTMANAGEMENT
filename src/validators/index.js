@@ -42,3 +42,7 @@ const userLoginValidator = ()=>{
 
 
 export {userRegisterValidator,userLoginValidator};
+
+
+
+export {userRegisterValidator}
